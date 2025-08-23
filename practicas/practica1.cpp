@@ -37,7 +37,115 @@ void main()											\n\
 void CrearTriangulo()
 {
 	GLfloat vertices[] = {
-		0.0f, 0.0f, 0.0f
+		-0.7f, 0.8f, 0.0f,
+		-0.3f, 0.8f, 0.0f,
+		-0.3f, 0.6f, 0.0f,
+
+		-0.7f, 0.8f, 0.0f,
+		-0.7f, 0.6f, 0.0f,
+		-0.3f, 0.6f, 0.0f,
+
+		-0.55f, 0.6f, 0.0f,
+		-0.4f, 0.6f, 0.0f,
+		-0.55f, 0.15f, 0.0f,
+
+		-0.4f, 0.15f, 0.0f,
+		-0.55f, 0.15f, 0.0f,
+		-0.4f, 0.6f, 0.0f,
+
+		-0.4f, 0.0f, 0.0f,
+		-0.7f, 0.15f, 0.0f,
+		-0.4f, 0.15f, 0.0f,
+
+		-0.7f, 0.15f, 0.0f,
+		-0.7f, 0.0f, 0.0f,
+		-0.4f, 0.0f, 0.0f,
+
+		-0.7f, 0.0f, 0.0f,
+		-0.8f, 0.0f, 0.0f,
+		-0.8f, 0.3f, 0.0f,
+
+		-0.7f, 0.0f, 0.0f,
+		-0.7f, 0.3f, 0.0f,
+		-0.8f, 0.3f, 0.0f,
+
+		//R
+
+		-0.2f, 0.0f, 0.0f,
+		-0.1f, 0.0f, 0.0f,
+		-0.2f, 0.8f, 0.0f,
+
+		-0.1f, 0.8f, 0.0f,
+		-0.2f, 0.8f, 0.0f,
+		-0.1f, 0.0f, 0.0f,
+
+		-0.1f, 0.8f, 0.0f,
+		0.2f, 0.8f, 0.0f,
+		0.2f, 0.7f, 0.0f,
+
+		-0.1f, 0.8f, 0.0f,
+		-0.1f, 0.7f, 0.0f,
+		0.2f, 0.7f, 0.0f,
+
+		//
+		0.1f, 0.7f, 0.0f,
+		0.2f, 0.7f, 0.0f,
+		0.2f, 0.5f, 0.0f,
+
+		0.1f, 0.7f, 0.0f,
+		0.1f, 0.5f, 0.0f,
+		0.2f, 0.5f, 0.0f,
+
+		//
+		-0.1f, 0.6f, 0.0f,
+		-0.1f, 0.5f, 0.0f,
+		0.1f, 0.5f, 0.0f,
+
+		0.1f, 0.6f, 0.0f,
+		0.1f, 0.5f, 0.0f,
+		-0.1f, 0.6f, 0.0f,
+
+		-0.1f, 0.6f, 0.0f,
+		-0.1f, 0.35f, 0.0f,
+		0.2f, 0.35f, 0.0f,
+
+		0.05f, 0.35f, 0.0f,
+		0.2f, 0.35f, 0.0f,
+		0.05f, 0.0f, 0.0f,
+
+		0.05f, 0.0f, 0.0f,
+		0.2f, 0.0f, 0.0f,
+		0.2f, 0.35f, 0.0f,
+
+		//Z
+
+		0.3f, 0.8f, 0.0f,
+		0.3f, 0.65f, 0.0f,
+		0.65f, 0.65f, 0.0f,
+
+		0.3f, 0.8f, 0.0f,
+		0.65f, 0.8f, 0.0f,
+		0.65f, 0.65f, 0.0f,
+
+		//0.65f, 0.8f, 0.0f,
+		//0.8f, 0.8f, 0.0f,
+		//0.65f, 0.65f, 0.0f,
+
+		0.3f, 0.2f, 0.0f, //abajo izquierda 
+		0.65f, 0.65f, 0.0f, //arriba derecha
+		0.4f, 0.2f, 0.0f, //abajo derecha
+
+		0.3f, 0.2f, 0.0f, //abajo
+		0.65f, 0.65f, 0.0f, //arriba derecha
+		0.5f, 0.65f, 0.0f, //arriba izquierda 
+
+		0.3f, 0.2f, 0.0f, //arriba izquierda
+		0.3f, 0.0f, 0.0f, //abajo izquierda
+		0.7f, 0.0f, 0.0f, //abajo derecha
+
+		0.3f, 0.2f, 0.0f, //arriba izquierda
+		0.7f, 0.2f, 0.0f,
+		0.7f, 0.0f, 0.0f
 	};
 	glGenVertexArrays(1, &VAO); //generar 1 VAO
 	glBindVertexArray(VAO);//asignar VAO
@@ -197,7 +305,7 @@ int main()
 		glUseProgram(shader);
 
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 81);
 		glBindVertexArray(0);
 
 		glUseProgram(0);
